@@ -13,7 +13,7 @@ This script exploits a directory traversal vulnerability in Argus Surveillance D
 1. **Clone the repository or download the script:**
 
     ```sh
-    git clone https://github.com/yourusername/argus-dvr-traversal.git
+    git clone https://github.com/t4ps3c/argus-dvr-traversal.git
     cd argus-dvr-traversal
     ```
 
@@ -27,20 +27,25 @@ This script exploits a directory traversal vulnerability in Argus Surveillance D
 1. **Run the script with the following command:**
 
     ```sh
-    python3 test.py <TARGET_IP> <TARGET_PORT> <TARGET_FILE>
+    python3 argus-dvr-traversal.py <TARGET_IP> <TARGET_PORT> <TARGET_FILEPATH>
     ```
 
     - `<TARGET_IP>`: The IP address of the target DVR.
     - `<TARGET_PORT>`: The port on which the DVR's web interface is running (typically 80 or 8080).
-    - `<TARGET_FILE>`: The file you want to access on the target system.
+    - `<TARGET_FILEPATH>`: The file path you want to access on the target system.
 
 2. **Example:**
-
+    For Unix
     ```sh
-    python3 test.py 192.168.1.100 8080 /etc/passwd
+    python3 argus-dvr-traversal.py 192.168.1.100 8080 /etc/passwd
     ```
+    This command attempts to retrieve the `/etc/passwd` file from the DVR at `192.168.1.100` on port `8080`.
 
-    This command attempts to retrieve the `/etc/passwd` file from the DVR at `192.168.1.100` on port `80`.
+    For Windows
+    ```sh
+    python3 argus-dvr-traversal.py 192.168.1.100 8080 Windows/system.ini
+    ```
+    This command attempts to retrieve the `Windows/system.ini` file from the DVR at `192.168.1.100` on port `8080`.
 
 ## How It Works
 The script constructs a URL with the directory traversal payload and sends an HTTP GET request to the target DVR. If the request is successful, the content of the targeted file is displayed.
